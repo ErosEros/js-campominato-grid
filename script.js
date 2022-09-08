@@ -8,11 +8,29 @@ console.log('JS OK')
  di verde se dispari. Inoltre emette un messaggio in console con il numero della cella cliccata. */
 
 
-//seleziona il bottone
+//seleziono il bottone che genererà una griglia quadrata
 const buttonGrid = document.getElementById('Button-grid');
 
-//assegno un evento al bottone che genera una grglia
-buttonGrid.addEventListener('click')
+//assegno un evento al bottone che genera una griglia
+buttonGrid.addEventListener('click', function(){
+    console.log('hai fatto un click');
+
+// seleziono l'elemento con id grid
+const gridTable = document.getElementById('grid');
+
+    // creo le celle per ogni numero e genero numeri da 1 a 100
+    for(let i = 1; i <= 100; i++){
+        console.log([i])
+
+        // creo un elemento div nell html
+        const cellaGrid = document.createElement('div');
+        // assegno una classe all'elemento div 
+        cellaGrid.className = 'cella';
+        
+        // stampo il risultato nell'elemento grid
+        gridTable.append(cellaGrid)
+    }
+})
 
 
 
