@@ -29,12 +29,34 @@ const gridTable = document.getElementById('grid');
         
         //aggiugno gli elementi alla griglia 
         gridTable.append(cellaGrid)
+
+        // rendo possibile cliccare su una singola cella
+        cellaGrid.addEventListener('click', function(){
+
+            // la cella cliccata cambia colore a seconda del tipo ( se è pari o è dispari)
+            console.log('cella cliccata', i )
+            const isEven = clickEven(i);
+
+            if (isEven) {
+                cellaGrid.classList.add('even')
+            }else {
+                cellaGrid.classList.add('odd')
+    
+            }
+        })
+
+       
+
         // stampo il risultato nell'elemento grid nell html
         cellaGrid.innerHTML = i;
 
-       
+ 
     }
 })
+
+function clickEven (num) {
+    return num % 2 === 0;
+}
 
 
 

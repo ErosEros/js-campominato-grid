@@ -19,4 +19,16 @@
     text-align: center;
     height: 150px;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.even {
+    background-color: yellow;
+} 
+
+.odd {
+    background-color: rgb(236, 85, 193);
 }
