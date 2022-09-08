@@ -17,7 +17,7 @@ buttonGrid.addEventListener('click', function(){
 
 // seleziono l'elemento con id grid
 const gridTable = document.getElementById('grid');
-
+    gridTable.innerHTML = ''
     // creo le celle per ogni numero e genero numeri da 1 a 100
     for(let i = 1; i <= 100; i++){
         console.log([i])
@@ -27,8 +27,12 @@ const gridTable = document.getElementById('grid');
         // assegno una classe all'elemento div 
         cellaGrid.className = 'cella';
         
-        // stampo il risultato nell'elemento grid
+        //aggiugno gli elementi alla griglia 
         gridTable.append(cellaGrid)
+        // stampo il risultato nell'elemento grid nell html
+        cellaGrid.innerHTML = i;
+
+       
     }
 })
 
